@@ -1,0 +1,80 @@
+/**
+ * tooltips.less
+ * ----------------------------------------------------------------------------
+ * Tooltip styling to be used throughout the theme.
+ *
+ * Purplest, Inc. Dark Theme - UI [1.0.2]
+ * (https://github.com/PurplestInc/purplest-inc-dark-ui/styles/tooltips.less)
+ *
+ * Maintained by: Purplest, Inc.
+ * (https://github.com/PurplestInc)
+ * (https://github.com/RobDukarski)
+ *
+ * @version 1.0.0 (06/02/16)
+ * @license MIT
+ * @copyright (c) 2016 Purplest, Inc.
+ * (https://purplest.com)
+ * ============================================================================
+ */
+
+@import "ui-variables";
+
+.tooltip {
+  @tip-background-color: @secondary-color;
+  @tip-text-color: #fff;
+  white-space: nowrap;
+
+  .keystroke {
+    color: #bbb;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 13px;
+    padding-left: 2px;
+  }
+
+  &.in {
+    opacity: 1;
+  }
+
+  .tooltip-inner {
+    background-color: @tip-background-color;
+    border-radius: @component-border-radius;
+    color: @tip-text-color;
+    letter-spacing: 0.125em;
+    line-height: 19px;
+    max-width: none;
+    text-shadow: 0 -1px 0 darken(@tip-background-color, 15%);
+    white-space: nowrap;
+  }
+
+  &.top .tooltip-arrow {
+    border-top-color: @tip-background-color;
+  }
+
+  &.top-left .tooltip-arrow {
+    border-top-color: @tip-background-color;
+  }
+
+  &.top-right .tooltip-arrow {
+    border-top-color: @tip-background-color;
+  }
+
+  &.right .tooltip-arrow {
+    border-right-color: @tip-background-color;
+  }
+
+  &.bottom .tooltip-arrow {
+    border-bottom-color: @tip-background-color;
+  }
+
+  &.bottom-left .tooltip-arrow {
+    border-bottom-color: @tip-background-color;
+  }
+
+  &.bottom-right .tooltip-arrow {
+    border-bottom-color: @tip-background-color;
+  }
+
+  &.left .tooltip-arrow {
+    border-left-color: @tip-background-color;
+  }
+}

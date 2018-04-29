@@ -1,0 +1,48 @@
+/**
+ * deprecation-cop.less
+ * ----------------------------------------------------------------------------
+ * Styles for the 'deprecation-cop' package.
+ *
+ * Purplest, Inc. Dark Theme - UI [1.0.2]
+ * (https://github.com/PurplestInc/purplest-inc-dark-ui/styles/deprecation-cop.less)
+ *
+ * Maintained by: Purplest, Inc.
+ * (https://github.com/PurplestInc)
+ * (https://github.com/RobDukarski)
+ *
+ * @version 1.0.0 (06/02/16)
+ * @license MIT
+ * @copyright (c) 2016 Purplest, Inc.
+ * (https://purplest.com)
+ * ============================================================================
+ */
+
+@import "ui-variables";
+
+.theme-purplest-inc-dark-ui {
+
+  // Base
+
+  atom-pane-container {
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+
+  // Links
+
+  .deprecation-cop .link,
+  .deprecation-cop .source-url {
+    color: @secondary-color;
+  }
+
+  .deprecation-cop .link:focus,
+  .deprecation-cop .link:hover,
+  .deprecation-cop .source-url:focus,
+  .deprecation-cop .source-url:hover {
+    color: @secondary-color-hover;
+  }
+
+  .deprecation-cop .link:active,
+  .deprecation-cop .source-url:active {
+    color: @secondary-color-active;
+  }
+}

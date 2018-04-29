@@ -1,0 +1,54 @@
+/**
+ * panes.less
+ * ----------------------------------------------------------------------------
+ * Styling for the panes within the Atom text editor.
+ *
+ * Purplest, Inc. Dark Theme - UI [1.0.2]
+ * (https://github.com/PurplestInc/purplest-inc-dark-ui/styles/panes.less)
+ *
+ * Maintained by: Purplest, Inc.
+ * (https://github.com/PurplestInc)
+ * (https://github.com/RobDukarski)
+ *
+ * @version 1.0.0 (06/02/16)
+ * @license MIT
+ * @copyright (c) 2016 Purplest, Inc.
+ * (https://purplest.com)
+ * ============================================================================
+ */
+
+@import "ui-mixins";
+@import "ui-variables";
+@import "buttons";
+
+.pane-item {
+  .panel {
+    border-color: fadeout(@inset-panel-border-color, 30%);
+  }
+}
+
+atom-pane-container {
+  atom-pane {
+    background-color: lighten(@app-background-color, 4%);
+
+    &:focus {
+      background-color: @app-background-color;
+    }
+  }
+
+  atom-pane-axis.horizontal > * {
+    border-right: 1px solid @pane-item-border-color;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  atom-pane-axis.vertical > * {
+    border-bottom: 1px solid @pane-item-border-color;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

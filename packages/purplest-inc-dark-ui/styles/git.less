@@ -1,0 +1,45 @@
+/**
+ * git.less
+ * ----------------------------------------------------------------------------
+ * Styling for the git messages within the Atom text editor.
+ *
+ * Purplest, Inc. Dark Theme - UI [1.0.2]
+ * (https://github.com/PurplestInc/purplest-inc-dark-ui/styles/git.less)
+ *
+ * Maintained by: Purplest, Inc.
+ * (https://github.com/PurplestInc)
+ * (https://github.com/RobDukarski)
+ *
+ * @version 1.0.0 (06/02/16)
+ * @license MIT
+ * @copyright (c) 2016 Purplest, Inc.
+ * (https://purplest.com)
+ * ============================================================================
+ */
+
+@import "ui-mixins";
+@import "ui-variables";
+
+.status {
+  .text(normal);
+}
+
+.status-added {
+  .text(success);
+}
+
+.status-ignored {
+  .text(subtle);
+}
+
+.status-modified {
+  .text(warning);
+}
+
+.status-removed {
+  .text(error);
+}
+
+.status-renamed {
+  .text(info);
+}

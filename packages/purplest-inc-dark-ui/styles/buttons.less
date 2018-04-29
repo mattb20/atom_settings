@@ -1,0 +1,224 @@
+/**
+ * buttons.less
+ * ----------------------------------------------------------------------------
+ * Styling for the buttons within the Atom text editor.
+ *
+ * Purplest, Inc. Dark Theme - UI [1.0.2]
+ * (https://github.com/PurplestInc/purplest-inc-dark-ui/styles/buttons.less)
+ *
+ * Maintained by: Purplest, Inc.
+ * (https://github.com/PurplestInc)
+ * (https://github.com/RobDukarski)
+ *
+ * @version 1.0.0 (06/02/16)
+ * @license MIT
+ * @copyright (c) 2016 Purplest, Inc.
+ * (https://purplest.com)
+ * ============================================================================
+ */
+
+@import "ui-variables";
+@import "ui-mixins";
+
+.btn-background (@fg-color, @normal-color, @hover-color, @active-color, @selected-color) {
+  background: @normal-color;
+  border: none;
+  border-radius: 3px;
+  box-shadow: inset 0  0   0   1px rgba(0, 0, 0, .05),
+              inset 0 -2px 0   0   lighten(@normal-color, 15%),
+                    0  0   1px 0   @base-border-color;
+  color: @fg-color;
+  cursor: pointer;
+  display: inline-block;
+  height: auto;
+  line-height: normal;
+  margin-bottom: 3px;
+  outline: none;
+  padding: 7px 8px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+  transition: all .1s linear;
+  vertical-align: middle;
+
+  &:focus {
+    background: @normal-color;
+    border: none;
+    box-shadow: inset 0 0 1px 1px @fg-color,
+                      0 0 5px 0   @hover-color;
+    color: @fg-color;
+    outline: none;
+    transition: background .1s linear, box-shadow .1s linear, color .1s linear;
+  }
+
+  &:hover {
+    background: @hover-color;
+    border: none;
+    box-shadow: inset 0  0   0 1px rgba(0,0,0,.05),
+                inset 0 -2px 0 0   lighten(@hover-color, 15%);
+    color: @fg-color;
+    transition: background .1s linear, box-shadow .1s linear, color .1s linear;
+  }
+
+  &:active {
+    background: @active-color;
+    border: none;
+    box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, .25);
+    color: darken(@fg-color, 5%);
+    margin-bottom: 3px;
+    outline: none;
+    transition: background .1s linear, box-shadow .1s linear, color .1s linear;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      color: darken(@fg-color, 5%);
+    }
+  }
+
+  &:active {
+    padding-top: 8px;
+    padding-bottom: 6px;
+  }
+
+  &.btn-xs:active {
+    margin-top: -1px;
+    padding-top: 5px;
+    padding-bottom: 1px;
+    position: relative;
+  }
+
+  &.btn-sm:active {
+    margin-top: -1px;
+    padding-top: 5px;
+    padding-bottom: 1px;
+    position: relative;
+  }
+
+  &.btn-lg:active {
+    bottom: 1px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    position: relative;
+  }
+
+  &.selected,
+  &.selected:hover {
+    background: @selected-color;
+    box-shadow: inset 0  0   0 1px rgba(0, 0, 0, .05),
+                inset 0 -2px 0 0   lighten(@selected-color, 15%);
+    color: @text-color-highlight;
+    margin-bottom: 3px;
+    transition: all .1s linear;
+
+    &:hover {
+      background: lighten(@selected-color, 10%);
+      box-shadow: inset 0  0   0 1px rgba(0, 0, 0, .05),
+                  inset 0 -2px 0 0   lighten(@selected-color, 25%);
+    }
+
+    &:active {
+      background: darken(@selected-color, 10%);
+      box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, .25);
+      color: darken(@fg-color, 15%);
+    }
+  }
+}
+
+.btn-variant (@tx, @bg) {
+  @fg: lighten(@tx, 10%);
+  @normal: @bg;
+  @hover: lighten(@bg, 10%);
+  @selected: darken(@bg, 10%);
+  .btn-background(@fg, @normal, @hover, @selected, @selected);
+}
+
+.btn {
+  .btn-background(#aaa, @button-background-color, lighten(@button-background-color, 10%), darken(@button-background-color, 10%), darken(@button-background-color, 10%));
+}
+
+.btn.btn-primary {
+  .btn-variant(@secondary-color, @primary-color);
+}
+
+.btn.btn-info {
+  .btn-variant(@text-color-info-hover, @background-color-info);
+}
+
+.btn.btn-success {
+  .btn-variant(@text-color-success-hover, @background-color-success);
+}
+
+.btn.btn-warning {
+  .btn-variant(@text-color-warning-hover, @background-color-warning);
+}
+
+.btn.btn-error {
+  .btn-variant(@text-color-error-hover, @background-color-error);
+}
+
+.btn.upgrade-button:disabled {
+  padding: 8px;
+}
+
+.caret {
+  border-top: 5px solid #fff;
+  margin-top: -1px;
+}
+
+.btn-group > .btn {
+  border: none;
+  border-right: 1px solid rgba(0, 0, 0, .5);
+  box-shadow: inset 0  0   0 1px rgba(0, 0, 0, .05),
+              inset 0 -2px 0 0   rgba(255, 255, 255, .15);
+  margin-right: 1px;
+  z-index: 1;
+
+  &:active {
+    box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, .25);
+    padding-top: 8px;
+    padding-bottom: 6px;
+  }
+}
+
+.btn-group > .btn:first-child {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.btn-group > .btn:last-child,
+.btn-group > .btn.selected:last-child,
+.btn-group > .dropdown-toggle {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.btn-group-xs > .btn {
+  &:active {
+    margin-top: -1px;
+    padding-top: 4px;
+    padding-bottom: 2px;
+    position: relative;
+  }
+}
+
+.btn-group-sm > .btn {
+  &:active {
+    margin-top: -1px;
+    padding-top: 4px;
+    padding-bottom: 2px;
+    position: relative;
+  }
+}
+
+.btn-group-lg > .btn {
+  &:active {
+    bottom: 1px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    position: relative;
+  }
+}

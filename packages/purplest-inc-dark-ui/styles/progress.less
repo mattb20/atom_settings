@@ -1,0 +1,85 @@
+/**
+ * progress.less
+ * ----------------------------------------------------------------------------
+ * Progress bar/spinner styling to be used throughout the theme.
+ *
+ * Purplest, Inc. Dark Theme - UI [1.0.2]
+ * (https://github.com/PurplestInc/purplest-inc-dark-ui/styles/progress.less)
+ *
+ * Maintained by: Purplest, Inc.
+ * (https://github.com/PurplestInc)
+ * (https://github.com/RobDukarski)
+ *
+ * @version 1.0.0 (06/02/16)
+ * @license MIT
+ * @copyright (c) 2016 Purplest, Inc.
+ * (https://purplest.com)
+ * ============================================================================
+ */
+
+@import "ui-variables";
+@import "ui-mixins";
+
+.loading-spinner(@size) {
+  background-image: url(images/octocat-spinner-128.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  height: @size;
+  width: @size;
+
+  &.inline-block {
+    display: inline-block;
+  }
+}
+
+.loading-spinner-large {
+  .loading-spinner(64px);
+}
+
+.loading-spinner-medium {
+  .loading-spinner(50px);
+}
+
+.loading-spinner-small {
+  .loading-spinner(32px);
+}
+
+.loading-spinner-tiny {
+  .loading-spinner(20px);
+}
+
+@progress-height: 16px;
+@progress-shine-gradient: -webkit-linear-gradient(top, rgba(255, 255, 255, .15), rgba(0, 0, 0, .15));
+
+progress {
+  -webkit-animation: animate-stripes 5s linear infinite;
+  -webkit-appearance: none;
+  background-color: #666;
+  background-image: -webkit-linear-gradient(-30deg, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0,0, 0, .1) 66%, transparent 66%), @progress-shine-gradient;
+  background-size: 25px @progress-height, 100% 100%, 100% 100%;
+  border-radius: @component-border-radius;
+  border-radius: 2px;
+  height: @progress-height;
+}
+
+progress::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+progress::-webkit-progress-value {
+  background-color: @primary-color;
+  background-image: @progress-shine-gradient;
+  border-radius: @component-border-radius;
+}
+
+progress[value] {
+  animation: none;
+  background-image: @progress-shine-gradient;
+}
+
+@-webkit-keyframes animate-stripes {
+  100% {
+    background-position: 100px 0px;
+  }
+}

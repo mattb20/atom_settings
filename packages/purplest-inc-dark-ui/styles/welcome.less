@@ -1,0 +1,54 @@
+/**
+ * welcome.less
+ * ----------------------------------------------------------------------------
+ * Styles for the 'welcome' package.
+ *
+ * Purplest, Inc. Dark Theme - UI [1.0.2]
+ * (https://github.com/PurplestInc/purplest-inc-dark-ui/styles/welcome.less)
+ *
+ * Maintained by: Purplest, Inc.
+ * (https://github.com/PurplestInc)
+ * (https://github.com/RobDukarski)
+ *
+ * @version 1.0.0 (06/02/16)
+ * @license MIT
+ * @copyright (c) 2016 Purplest, Inc.
+ * (https://purplest.com)
+ * ============================================================================
+ */
+
+@import "ui-mixins";
+
+.theme-purplest-inc-dark-ui {
+  .welcome {
+
+    // Card
+
+    &-card {
+      background-color: #fafafa;
+      border: 1px solid fade(@primary-color, 5%);
+      box-shadow: 0 2px 2px  0   fade(@primary-color, 15%),
+                  0 3px 1px -2px fade(@primary-color, 15%),
+                  0 1px 5px  0   fade(@primary-color, 15%);
+      box-sizing: border-box;
+      transition: all .1s linear;
+    }
+
+    &-card:hover {
+      background-color: #fff;
+      box-shadow: 0 2px 2px  0   fade(@primary-color, 15%),
+                  0 3px 1px -2px fade(@primary-color, 25%),
+                  0 1px 5px  0   fade(@primary-color, 25%);
+    }
+
+    // Logo
+
+    &-logo {
+      color: @primary-color;
+    }
+
+    // Links
+
+    .links();
+  }
+}

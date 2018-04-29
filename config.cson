@@ -1,0 +1,15 @@
+"*":
+  core:
+    disabledPackages: [
+      "jslint"
+      "keybinding-resolver"
+    ]
+    telemetryConsent: "limited"
+    themes: [
+      "autumn-highlighter-syntax"
+    ]
+  "exception-reporting":
+    userId: "8b0257bd-ff10-401a-855d-9e45b8a1c928"
+  "linter-ui-default": {}
+  welcome:
+    showOnStartup: false

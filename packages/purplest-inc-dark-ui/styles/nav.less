@@ -1,0 +1,47 @@
+/**
+ * nav.less
+ * ----------------------------------------------------------------------------
+ * Navigation styling to be used throughout the theme.
+ *
+ * Purplest, Inc. Dark Theme - UI [1.0.2]
+ * (https://github.com/PurplestInc/purplest-inc-dark-ui/styles/nav.less)
+ *
+ * Maintained by: Purplest, Inc.
+ * (https://github.com/PurplestInc)
+ * (https://github.com/RobDukarski)
+ *
+ * @version 1.0.0 (06/02/16)
+ * @license MIT
+ * @copyright (c) 2016 Purplest, Inc.
+ * (https://purplest.com)
+ * ============================================================================
+ */
+
+@import "ui-variables";
+
+.nav-tabs {
+  border-bottom: 1px solid @base-border-color;
+
+  li {
+    a,
+    &.active a {
+      border: none;
+      margin-right: 0px;
+      margin-bottom: 1px;
+    }
+
+    a:hover,
+    &.active a,
+    &.active a:hover {
+      background-color: @background-color-highlight;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border: none;
+      color: @text-color-selected;
+    }
+
+    &.active a {
+      background-color: @tab-background-color-active;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+/**
+ * sites.less
+ * ----------------------------------------------------------------------------
+ * Site styling to be used throughout the theme.
+ *
+ * Purplest, Inc. Dark Theme - UI [1.0.2]
+ * (https://github.com/PurplestInc/purplest-inc-dark-ui/styles/sites.less)
+ *
+ * Maintained by: Purplest, Inc.
+ * (https://github.com/PurplestInc)
+ * (https://github.com/RobDukarski)
+ *
+ * @version 1.0.0 (06/02/16)
+ * @license MIT
+ * @copyright (c) 2016 Purplest, Inc.
+ * (https://purplest.com)
+ * ============================================================================
+ */
+
+@import "ui-mixins";
+@import "ui-variables";
+
+.ui-site(@num, @color) {
+  .ui-site-@{num} {
+    background-color: @color;
+  }
+}
+
+.ui-site(1, @ui-site-color-1);
+.ui-site(2, @ui-site-color-2);
+.ui-site(3, @ui-site-color-3);
+.ui-site(4, @ui-site-color-4);
+.ui-site(5, @ui-site-color-5);

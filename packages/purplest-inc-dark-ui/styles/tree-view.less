@@ -1,0 +1,352 @@
+/**
+ * tree-view.less
+ * ----------------------------------------------------------------------------
+ * Styles for the 'tree-view' package.
+ *
+ * Purplest, Inc. Dark Theme - UI [1.0.2]
+ * (https://github.com/PurplestInc/purplest-inc-dark-ui/styles/tree-view.less)
+ *
+ * Maintained by: Purplest, Inc.
+ * (https://github.com/PurplestInc)
+ * (https://github.com/RobDukarski)
+ *
+ * @version 1.0.1 (05/25/17)
+ * @license MIT
+ * @copyright (c) 2017 Purplest, Inc.
+ * (https://purplest.com)
+ * ============================================================================
+ */
+
+@import "ui-variables";
+
+// Base selected item styles
+
+.tree-view {
+  font-size: @font-size;
+
+  .tree-view .directory .header.list-item:hover,
+  .selected {
+    &::before {
+      background: @tree-view-item-background-color-selected;
+      box-shadow: inset -1px  0   0 0 @base-border-color,
+                  inset  0   -4px 0 0 @primary-color,
+                  inset  0   -5px 0 0 @base-border-color,
+                         0    1px 0 0 @base-border-color,
+                         0   -1px 0 0 @base-border-color;
+      right: 0;
+      z-index: 1;
+    }
+
+    .list-item::before,
+    span {
+      position: relative;
+      z-index: 2;
+    }
+
+    span {
+      position: relative;
+      z-index: 3;
+    }
+  }
+
+  .list-tree {
+    max-height: 30px;
+    padding: 0;
+  }
+}
+
+.tree-view-scroller {
+  background-color: @tree-view-background-color;
+  overflow: scroll;
+  width: 98.5%;
+}
+
+.tree-view-scroller::after {
+  background-color: @base-border-color;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  right: 11px;
+  top: 0;
+  width: 1px;
+  z-index: 9999;
+}
+
+// Resizer
+
+.tree-view-resizer {
+  .tree-view-resize-handle {
+    background-color: @tree-view-resize-handle-background-color;
+    box-shadow: -1px 0 0 0 @base-border-color;
+    width: 8px;
+  }
+
+  .tree-view-resize-handle:hover {
+    background-color: @tree-view-resize-handle-background-color-hover;
+  }
+
+  .tree-view-resize-handle:active {
+    background-color: @tree-view-resize-handle-background-color-active;
+  }
+}
+
+// Hover/Focus changes for enhanced user-friendliness
+
+.tree-view .directory {
+  cursor: pointer;
+}
+
+.tree-view .list-item {
+  display: block;
+  padding-left: 8px;
+  padding-right: 18px;
+}
+
+.tree-view > .list-item:last-child > .list-item:last-child {
+  background: none;
+}
+
+.tree-view .list-tree > .list-item.selected {
+  line-height: @tree-view-item-height;
+}
+
+.tree-view .selected:hover > .header.list-item:hover,
+.tree-view .header.list-item.selected:hover::before,
+.tree-view .list-tree > .list-item.selected:hover::before {
+  background: @tree-view-item-background-color-selected-hover;
+  box-shadow:        0    1px 0 0 @base-border-color,
+                     0   -1px 0 0 @base-border-color,
+              inset -1px  0   0 0 @base-border-color,
+              inset  0   -4px 0 0 @primary-color-hover,
+              inset  0   -5px 0 0 @base-border-color;
+  right: 0;
+}
+
+.tree-view .list-item,
+.tree-view .list-item::before,
+.tree-view .list-tree > .list-item,
+.tree-view .list-tree > .list-item::before,
+.tree-view .list-tree > .list-nested-item,
+.tree-view .list-tree > .list-nested-item::before,
+.tree-view .list-tree > .list-nested-item > .list-item,
+.tree-view .list-tree > .list-nested-item > .list-item::before {
+  min-height: @tree-view-item-height;
+  line-height: @tree-view-item-height;
+}
+
+.tree-view .header.list-item:hover,
+.tree-view .list-tree > .list-item:hover {
+  color: @text-color-highlight;
+  cursor: pointer;
+
+  &::before {
+    height: 30px;
+    z-index: 1;
+  }
+
+  & > span {
+    position: relative;
+    z-index: 5;
+  }
+}
+
+.tree-view .directory:hover .header.list-item {
+  box-shadow: none;
+  position: relative;
+  z-index: 3;
+}
+
+.tree-view .directory .header.list-item:hover {
+  background-color: @tree-view-item-background-color-hover;
+  color: @text-color-highlight;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    z-index: 2;
+  }
+
+  & > span {
+    position: relative;
+    z-index: 5;
+  }
+}
+
+.focusable-panel {
+  opacity: 1;
+
+  &:focus {
+    background: #282828;
+
+    .selected::before {
+      background: @tree-view-item-background-color-selected-active;
+      box-shadow: inset -1px  0   0 0 @base-border-color,
+                         0    1px 0 0 @base-border-color,
+                         0   -1px 0 0 @base-border-color;
+    }
+
+    .list-tree > .list-item.selected {
+      line-height: @tree-view-item-height;
+    }
+
+    .directory.selected:hover > .header.list-item:hover,
+    .list-tree > .list-item.selected:hover::before {
+      background: @tree-view-item-background-color-selected-active-hover;
+      box-shadow: inset -1px  0   0 0 @base-border-color,
+                         0    1px 0 0 @base-border-color,
+                         0   -1px 0 0 @base-border-color;
+    }
+  }
+}
+
+.tree-view * {
+  background: none;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+// Positioning for the tree-view list-items
+
+.tree-view.list-group li:not(.list-nested-item).selected,
+.tree-view.list-tree li:not(.list-nested-item).selected,
+.tree-view.list-group li.list-nested-item.selected > .list-item,
+.tree-view.list-tree li.list-nested-item.selected > .list-item {
+  padding-left: 0;
+  position: relative;
+}
+
+.tree-view.list-group li:not(.list-nested-item),
+.tree-view.list-tree li:not(.list-nested-item),
+.tree-view.list-group li.list-nested-item > .list-item,
+.tree-view.list-tree li.list-nested-item > .list-item,
+.tree-view.list-tree li.list-nested-item.selected > .list-item {
+  padding-left: 5px;
+}
+
+.list-tree.has-collapsable-children .list-nested-item > .list-tree > li,
+.list-tree.has-collapsable-children .list-nested-item > .list-tree > li > .list-item {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.list-tree.has-collapsable-children .list-nested-item > .list-tree > li.directory,
+.tree-view.list-tree.has-collapsable-children .list-nested-item > .list-tree > li ol .list-item.selected {
+  padding-left: 0;
+}
+
+.tree-view.list-tree li:not(.list-nested-item).selected span,
+.tree-view.list-tree.has-collapsable-children .list-nested-item > .list-tree > li ol .list-item.selected span {
+  position: relative;
+  z-index: 1;
+}
+
+.tree-view.list-tree .project-root.directory > .header.list-item:hover,
+.tree-view.list-tree .project-root .directory > .header.list-item:hover,
+.list-tree.has-collapsable-children .list-nested-item > .list-tree > li ol .list-item,
+.tree-view.list-tree.has-collapsable-children .list-nested-item > .list-tree > li ol .list-item.selected {
+  margin: 0;
+  padding-left: 39px;
+}
+
+.tree-view.list-tree .project-root.directory > .header.list-item,
+.tree-view.list-tree .project-root.directory > .header.list-item::before,
+.tree-view.list-tree .project-root.directory > .header.list-item:hover {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 5px;
+}
+
+.tree-view.list-tree .project-root .directory > .header.list-item {
+  height: 30px;
+}
+
+.tree-view.list-tree > .project-root.directory > .list-tree > .directory > .header.list-item:hover {
+  padding-left: 22px;
+}
+
+// Extra padding/positioning, up to 25 levels deep
+
+.project-root.directory > .list-item {
+  .generate-drop-down-headers(25);
+}
+
+.project-root.directory {
+  .generate-drop-down-items(25);
+}
+
+.project-root.directory {
+  .generate-drop-down-lists(25);
+}
+
+.generate-drop-down-headers(@n, @i: 5) when (@i =< (@n * 25)) {
+  + .list-tree > .directory > .list-item {
+    padding-left: (@i + 17) + 0px;
+
+    .generate-drop-down-headers(@n, (@i + 17));
+  }
+}
+
+.generate-drop-down-items(@n, @i: 5) when (@i =< (@n * 25)) {
+  > .list-tree > .entry {
+    padding-left: (@i + 17) + 0px;
+
+    .generate-drop-down-items(@n, (@i + 17));
+  }
+}
+
+.generate-drop-down-lists(@n, @i: 5) when (@i =< (@n * 25)) {
+  > .list-tree > .directory {
+    padding-left: 0px;
+
+    .generate-drop-down-lists(@n, (@i + 17));
+  }
+}
+
+.tree-view.list-tree .project-root.directory.collapsed > .header.list-item::before {
+  left: 2px;
+}
+
+.tree-view.list-tree .project-root.directory > .header.list-item::before {
+  left: 0;
+  padding-left: 0;
+}
+
+.tree-view.list-tree .project-root.directory > .header.list-item::before,
+.tree-view.list-tree .project-root .directory > .header.list-item::before {
+  position: relative;
+  top: -1px;
+}
+
+.tree-view.list-tree .project-root.directory > .header.list-item:hover::before,
+.tree-view.list-tree .project-root .directory > .header.list-item:hover::before {
+  background-color: transparent;
+  box-shadow: none;
+  padding-left: 0;
+  position: relative;
+}
+
+.tree-view .entry::before {
+  height: 30px;
+  width: 100%;
+}
+
+.list-group .selected > *,
+.list-tree .selected > * {
+  position: static;
+}
+
+.tree-view.full-menu {
+  background: none;
+  overflow: hidden;
+  padding: 0;
+}
+
+[data-show-on-right-side=true] {
+  .tree-view .selected::before,
+  .focusable-panel {
+    box-shadow: inset 3px 0 0 rgba(0,0,0, .05);
+  }
+}

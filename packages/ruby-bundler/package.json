@@ -1,0 +1,69 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/d-118311-944-1yj47jl.x17piafw29/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/d-118311-944-1yj47jl.x17piafw29/package.tgz",
+        "spec": "/private/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/d-118311-944-1yj47jl.x17piafw29/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/apm-install-dir-118311-944-89c5rb.3x3q96n7b9"
+    ]
+  ],
+  "_from": "../d-118311-944-1yj47jl.x17piafw29/package.tgz",
+  "_id": "ruby-bundler@0.3.0",
+  "_inCache": true,
+  "_location": "/ruby-bundler",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/d-118311-944-1yj47jl.x17piafw29/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/d-118311-944-1yj47jl.x17piafw29/package.tgz",
+    "spec": "/private/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/d-118311-944-1yj47jl.x17piafw29/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-118311-944-1yj47jl.x17piafw29/package.tgz",
+  "_shasum": "706ed2432a49cc64c2c5c6f5b3520f541b6b1cf6",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/d-118311-944-1yj47jl.x17piafw29/package.tgz",
+  "_where": "/private/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/apm-install-dir-118311-944-89c5rb.3x3q96n7b9",
+  "activationCommands": {
+    "atom-workspace": [
+      "ruby-bundler:install",
+      "ruby-bundler:close"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/willcosgrove/atom-ruby-bundler/issues"
+  },
+  "dependencies": {
+    "atom-space-pen-views": "^2.0.3",
+    "underscore": "~1.5.2"
+  },
+  "description": "Control Bundler from Atom",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "homepage": "https://github.com/willcosgrove/atom-ruby-bundler#readme",
+  "license": "MIT",
+  "main": "./lib/ruby-bundler",
+  "name": "ruby-bundler",
+  "optionalDependencies": {},
+  "private": true,
+  "readme": "# atom-ruby-bundler\n\nRun `bundle install` directly from Atom with `alt-cmd-b`\n\n![](http://f.cl.ly/items/2h3U3b3N461J421a2f2p/cero%202014-03-01%2003-53-42.jpg)\n\nIf you like it, and find it useful, and are rolling in money consider [buying it](https://gum.co/PdwU).\n\n\n# Gotchas\n\nIf you're using rbenv, you need to make sure your PATH is set correctly for Atom.  You can do this inside of the `~/.atom/init.coffee` file.\n\nAdd a line like this for rbenv:\n\n```coffee\nprocess.env.PATH = \"#{process.env.HOME}/.rbenv/shims:#{process.env.HOME}/.rbenv/bin:#{process.env.PATH}\"\n```\n\nThere may be a similar process to get RVM to work, but I don't have any experience with it.  Post an issue if you're having trouble getting RVM to load properly.\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willcosgrove/atom-ruby-bundler.git"
+  },
+  "version": "0.3.0"
+}

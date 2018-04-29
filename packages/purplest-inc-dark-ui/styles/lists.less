@@ -1,0 +1,167 @@
+/**
+ * lists.less
+ * ----------------------------------------------------------------------------
+ * Styling for the lists within the Atom text editor.
+ *
+ * Purplest, Inc. Dark Theme - UI [1.0.2]
+ * (https://github.com/PurplestInc/purplest-inc-dark-ui/styles/lists.less)
+ *
+ * Maintained by: Purplest, Inc.
+ * (https://github.com/PurplestInc)
+ * (https://github.com/RobDukarski)
+ *
+ * @version 1.0.0 (06/02/16)
+ * @license MIT
+ * @copyright (c) 2016 Purplest, Inc.
+ * (https://purplest.com)
+ * ============================================================================
+ */
+
+@import "ui-variables";
+@import "ui-mixins";
+@import "octicon-mixins";
+
+.list-group,
+.list-tree {
+  li:not(.list-nested-item),
+  li.list-nested-item > .list-item {
+    .text(normal);
+  }
+
+  .generate-list-item-text-color(@class) {
+    li:not(.list-nested-item).text-@{class},
+    li.list-nested-item.text-@{class} > .list-item {
+      .text(@class);
+    }
+  }
+
+  .generate-list-item-text-color(subtle);
+  .generate-list-item-text-color(info);
+  .generate-list-item-text-color(success);
+  .generate-list-item-text-color(warning);
+  .generate-list-item-text-color(error);
+  .generate-list-item-text-color(selected);
+
+  .generate-list-item-status-color(@color, @status) {
+    li:not(.list-nested-item).status-@{status},
+    li.list-nested-item.status-@{status} > .list-item {
+      color: @color;
+    }
+
+    li:not(.list-nested-item).selected.status-@{status},
+    li.list-nested-item.selected.status-@{status} > .list-item {
+      color: @color;
+    }
+  }
+
+  .generate-list-item-status-color(@text-color-subtle, ignored);
+  .generate-list-item-status-color(@text-color-added, added);
+  .generate-list-item-status-color(@text-color-renamed, renamed);
+  .generate-list-item-status-color(@text-color-modified, modified);
+  .generate-list-item-status-color(@text-color-removed, removed);
+
+  li:not(.list-nested-item).selected,
+  li.list-nested-item.selected > .list-item {
+    .text(selected);
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      z-index: -1;
+    }
+  }
+}
+
+.select-list ol.list-group,
+&.select-list ol.list-group {
+  li.two-lines {
+    .secondary-line {
+      color: @text-color-subtle;
+    }
+
+    &.selected .secondary-line {
+      color: @text-color;
+      text-shadow: none;
+    }
+  }
+
+  li.selected {
+    background-color: @primary-color;
+    &::before{
+      display: none;
+    }
+
+    &:hover {
+      background-color: @primary-color-hover;
+    }
+
+    &:active {
+      background-color: @primary-color-active;
+    }
+  }
+
+  &.mark-active{
+    @active-icon-size: 14px;
+
+    li::before {
+      background-color: transparent;
+      content: '';
+      display: inline-block;
+      height: @active-icon-size;
+      left: auto; right: auto;
+      position: static;
+      width: @active-icon-size;
+    }
+
+    > li:not(.active)::before {
+      margin-right: @component-icon-padding;
+    }
+
+    li.active {
+      .octicon(check, @active-icon-size);
+
+      &::before {
+        color: @text-color-success;
+        margin-right: @component-icon-padding;
+      }
+    }
+  }
+}
+
+.select-list.popover-list {
+  background-color: @overlay-background-color;
+  border-radius: @component-border-radius;
+  border: 1px solid @overlay-border-color;
+  box-shadow: 0 0 10px @base-border-color;
+  padding: @component-padding/2;
+
+  atom-text-editor {
+    margin-bottom: @component-padding/2;
+  }
+
+  .list-group li {
+    padding-left: @component-padding/2;
+  }
+}
+
+.ui-sortable {
+  li {
+    line-height: 2.5;
+  }
+
+  li.ui-sortable-placeholder {
+    background-color: darken(@pane-item-background-color, 10%);
+    visibility: visible !important;
+  }
+}
+
+li.ui-draggable-dragging, li.ui-sortable-helper {
+  background: @background-color-highlight;
+  border-radius: 0;
+  border: 0;
+  box-shadow: 0 0 1px @base-border-color;
+  height: @component-line-height;
+  line-height: @component-line-height;
+  list-style: none;
+  padding: 0 @component-padding;
+}

@@ -1,0 +1,59 @@
+/**
+ * editor.less
+ * ----------------------------------------------------------------------------
+ * Styling for the editor area of the Atom text editor.
+ *
+ * Purplest, Inc. Dark Theme - UI [1.0.2]
+ * (https://github.com/PurplestInc/purplest-inc-dark-ui/styles/editor.less)
+ *
+ * Maintained by: Purplest, Inc.
+ * (https://github.com/PurplestInc)
+ * (https://github.com/RobDukarski)
+ *
+ * @version 1.0.1 (05/25/17)
+ * @license MIT
+ * @copyright (c) 2017 Purplest, Inc.
+ * (https://purplest.com)
+ * ============================================================================
+ */
+
+@import "ui-variables";
+@import "ui-mixins";
+
+atom-text-editor[mini],
+atom-text-editor[mini]::shadow {
+  background-color: @input-background-color;
+  border-radius: @component-border-radius;
+  border: 1px solid @input-border-color;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  color: @text-color-highlight;
+  padding-left: @component-padding/2;
+
+  .cursor {
+    border-color: #fff;
+  }
+
+  .selection .region {
+    background-color: lighten(@input-background-color, 10%);
+  }
+}
+
+atom-text-editor[mini].is-focused,
+atom-text-editor[mini].is-focused::shadow {
+  background-color: lighten(@input-background-color, 5%);
+
+  .selection .region { background-color: desaturate(@background-color-info, 50%); }
+}
+
+// FIXME: these should go in syntax themes?
+atom-text-editor,
+atom-text-editor::shadow {
+  .gutter-container .gutter:first-child {
+    background: @input-background-color;
+    box-shadow: 1px 0 0 0 @base-border-color;
+  }
+
+  .gutter.drop-shadow {
+    -webkit-box-shadow: -2px 0 10px 2px #222;
+  }
+}

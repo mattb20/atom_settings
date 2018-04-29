@@ -1,0 +1,43 @@
+/**
+ * status-bar.less
+ * ----------------------------------------------------------------------------
+ * Styles for the 'status-bar' package.
+ *
+ * Purplest, Inc. Dark Theme - UI [1.0.2]
+ * (https://github.com/PurplestInc/purplest-inc-dark-ui/styles/status-bar.less)
+ *
+ * Maintained by: Purplest, Inc.
+ * (https://github.com/PurplestInc)
+ * (https://github.com/RobDukarski)
+ *
+ * @version 1.0.0 (06/02/16)
+ * @license MIT
+ * @copyright (c) 2016 Purplest, Inc.
+ * (https://purplest.com)
+ * ============================================================================
+ */
+
+@import "ui-variables";
+
+.theme-purplest-inc-dark-ui {
+
+  // Base
+
+  status-bar,
+  .status-bar {
+    background-color: @panel-background-color;
+    box-shadow: inset 0 2px 0 0 rgba(255, 255, 255, .025);
+
+    .text-info {
+      color: @text-color-info;
+    }
+
+    .text-info:hover {
+      color: @text-color-info-hover;
+    }
+
+    .text-info:active{
+      color: @text-color-info-active;
+    }
+  }
+}

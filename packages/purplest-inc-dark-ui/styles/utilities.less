@@ -1,0 +1,59 @@
+/**
+ * utilities.less
+ * ----------------------------------------------------------------------------
+ * Utility styles to be used throughout the theme.
+ *
+ * Purplest, Inc. Dark Theme - UI [1.0.2]
+ * (https://github.com/PurplestInc/purplest-inc-dark-ui/styles/utilities.less)
+ *
+ * Maintained by: Purplest, Inc.
+ * (https://github.com/PurplestInc)
+ * (https://github.com/RobDukarski)
+ *
+ * @version 1.0.0 (06/02/16)
+ * @license MIT
+ * @copyright (c) 2016 Purplest, Inc.
+ * (https://purplest.com)
+ * ============================================================================
+ */
+
+@import "ui-mixins";
+@import "ui-variables";
+
+.key-binding {
+  -webkit-box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.1);
+  background: -webkit-linear-gradient(rgba(100, 100, 100, 0.5), rgba(70, 70, 70, 0.5));
+  border-radius: @component-border-radius;
+  display: inline-block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: @font-size - 1px;
+  line-height: 100%;
+  margin-left: @component-icon-padding;
+  padding: @component-padding / 2;
+}
+
+.badge {
+  .text(highlight);
+  background: @primary-color;
+  transition: all .1s linear;
+
+  &:hover {
+    background: @primary-color-hover;
+  }
+
+  &.badge-error:hover {
+    background: @background-color-error-hover;
+  }
+
+  &.badge-info:hover {
+    background: @background-color-info-hover;
+  }
+
+  &.badge-success:hover {
+    background: @background-color-success-hover;
+  }
+
+  &.badge-warning:hover {
+    background: @background-color-warning-hover;
+  }
+}

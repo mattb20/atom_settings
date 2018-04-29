@@ -1,0 +1,76 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/d-118316-61001-1y4vhel.m13xpkqpvi/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/d-118316-61001-1y4vhel.m13xpkqpvi/package.tgz",
+        "spec": "/private/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/d-118316-61001-1y4vhel.m13xpkqpvi/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/apm-install-dir-118316-61001-1y6jwpd.dnrp8ehfr"
+    ]
+  ],
+  "_from": "../d-118316-61001-1y4vhel.m13xpkqpvi/package.tgz",
+  "_id": "atom-js-console@1.2.2",
+  "_inCache": true,
+  "_location": "/atom-js-console",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/d-118316-61001-1y4vhel.m13xpkqpvi/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/d-118316-61001-1y4vhel.m13xpkqpvi/package.tgz",
+    "spec": "/private/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/d-118316-61001-1y4vhel.m13xpkqpvi/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-118316-61001-1y4vhel.m13xpkqpvi/package.tgz",
+  "_shasum": "57cea3c0a5aaae52acdaa6110d6eed4ee2877a48",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/d-118316-61001-1y4vhel.m13xpkqpvi/package.tgz",
+  "_where": "/private/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/apm-install-dir-118316-61001-1y6jwpd.dnrp8ehfr",
+  "activationCommands": {
+    "atom-workspace": "js-console:toggle"
+  },
+  "bugs": {
+    "url": "https://github.com/pierregoutheraud/atom-js-console/issues"
+  },
+  "dependencies": {
+    "babel-core": "^6.24.0",
+    "babel-preset-stage-0": "^6.22.0"
+  },
+  "description": "A javascript console inside atom",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/pierregoutheraud/atom-js-console#readme",
+  "keywords": [
+    "console",
+    "javascript",
+    "js",
+    "REPL",
+    "Eval",
+    "Read–Eval–Print Loop",
+    "es2015",
+    "es6",
+    "babel"
+  ],
+  "license": "MIT",
+  "main": "./lib/main",
+  "name": "atom-js-console",
+  "optionalDependencies": {},
+  "readme": "# atom-js-console package\n\nA javascript console inside atom. It uses Babel stage-0 preset.\n\n## Usage\n\nRight click and chose \"Open javascript console\"<br />\nShortcut: ctrl+j ctrl+s\n\n![how-to-use-atom-js-console](http://i.imgur.com/5xtoxrY.gif)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pierregoutheraud/atom-js-console.git"
+  },
+  "version": "1.2.2"
+}

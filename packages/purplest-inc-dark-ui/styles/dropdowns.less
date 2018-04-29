@@ -1,0 +1,39 @@
+/**
+ * dropdowns.less
+ * ----------------------------------------------------------------------------
+ * Styling for the dropdowns within the Atom text editor.
+ *
+ * Purplest, Inc. Dark Theme - UI [1.0.2]
+ * (https://github.com/PurplestInc/purplest-inc-dark-ui/styles/dropdowns.less)
+ *
+ * Maintained by: Purplest, Inc.
+ * (https://github.com/PurplestInc)
+ * (https://github.com/RobDukarski)
+ *
+ * @version 1.0.0 (06/02/16)
+ * @license MIT
+ * @copyright (c) 2016 Purplest, Inc.
+ * (https://purplest.com)
+ * ============================================================================
+ */
+
+@import "ui-variables";
+@import "ui-mixins";
+@import "octicon-mixins";
+
+.dropdown-menu {
+  background-color: @overlay-background-color;
+  border: none;
+  border-radius: @component-border-radius;
+  box-shadow: 0 0 0 1px @base-border-color;
+  padding: 0;
+
+  > li > a {
+    .text(normal);
+  }
+
+  > li > a:hover {
+    .text(highlight);
+    background-color: @background-color-highlight;
+  }
+}

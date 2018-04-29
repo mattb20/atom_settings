@@ -1,0 +1,249 @@
+/**
+ * ui-variables.less
+ * ----------------------------------------------------------------------------
+ * UI variables to be used throughout the theme.
+ *
+ * Purplest, Inc. Dark Theme - UI [1.0.2]
+ * (https://github.com/PurplestInc/purplest-inc-dark-ui/styles/ui-variables.less)
+ *
+ * Maintained by: Purplest, Inc.
+ * (https://github.com/PurplestInc)
+ * (https://github.com/RobDukarski)
+ *
+ * @version 1.0.0 (06/02/16)
+ * @license MIT
+ * @copyright (c) 2016 Purplest, Inc.
+ * (https://purplest.com)
+ * ============================================================================
+ */
+
+// @theme-type: "dark";
+
+@import "syntax-variables";
+
+// Colors
+
+@primary-color: #6b00b9;
+@primary-color-hover: lighten(@primary-color, 15%);
+@primary-color-active: darken(@primary-color, 15%);
+
+@secondary-color: lighten(@primary-color, 25%);
+@secondary-color-hover: lighten(@secondary-color, 10%);
+@secondary-color-active: darken(@secondary-color, 10%);
+
+@text-color-info: lighten(@background-color-info, 10%);
+@text-color-success: lighten(@background-color-success, 10%);
+@text-color-warning: lighten(@background-color-warning, 10%);
+@text-color-error: lighten(@background-color-error, 10%);
+@text-color-info-hover: lighten(@text-color-info, 10%);
+@text-color-success-hover: lighten(@text-color-success, 10%);
+@text-color-warning-hover: lighten(@text-color-warning, 10%);
+@text-color-error-hover: lighten(@text-color-error, 10%);
+@text-color-info-active: darken(@text-color-info, 10%);
+@text-color-success-active: darken(@text-color-success, 10%);
+@text-color-warning-active: darken(@text-color-warning, 10%);
+@text-color-error-active: darken(@text-color-error, 10%);
+
+@text-color-ignored: @text-color-subtle;
+@text-color-added: @text-color-success;
+@text-color-renamed: @text-color-info;
+@text-color-modified: @text-color-warning;
+@text-color-removed: @text-color-error;
+
+@background-color-info: lighten(#0044a9, 10%);
+@background-color-success: lighten(#2e8c40, 10%);
+@background-color-warning: lighten(#af851b, 10%);
+@background-color-error: lighten(#af4136, 10%);
+@background-color-info-hover: lighten(@background-color-info, 10%);
+@background-color-success-hover: lighten(@background-color-success, 10%);
+@background-color-warning-hover: lighten(@background-color-warning, 10%);
+@background-color-error-hover: lighten(@background-color-error, 10%);
+@background-color-info-active: darken(@background-color-info, 10%);
+@background-color-success-active: darken(@background-color-success, 10%);
+@background-color-warning-active: darken(@background-color-warning, 10%);
+@background-color-error-active: darken(@background-color-error, 10%);
+@background-color-highlight: rgba(255, 255, 255, 0.07);
+@background-color-selected: @primary-color;
+
+// .variables() when (@theme-type = "dark") {
+
+// @darkest-base: #111;
+// @darker-base: #1a1a1a;
+// @dark-base: #202020;
+// @base: #222;
+// @bright-base: #242424;
+// @brighter-base: #2a2a2a;
+// @brightest-base: #333;
+// @light-base: #3b3b3b;
+// @lighter-base: #424242;
+// @lightest-base: #555;
+
+@darkest-base: darken(@base, 6.75%);
+@darker-base: darken(@base, 3%);
+@dark-base: darken(@base, .75%);
+@base: darken(#3b3b3b, 10%);//#6b00b9;//multiply(#ddd, #6b00b9);
+@bright-base: lighten(@base, .75%);
+@brighter-base: lighten(@base, 3%);
+@brightest-base: lighten(@base, 6.75%);
+@light-base: lighten(@base, 9.75%);
+@lighter-base: lighten(@base, 12.5%);
+@lightest-base: lighten(@base, 20%);
+
+@text-color: #aaa;
+@text-color-subtle: @lightest-base;
+@text-color-highlight: #fff;
+@text-color-selected: @text-color-highlight;
+
+@app-background-color: @darker-base;
+
+@base-background-color: lighten(@tool-panel-background-color, 5%);
+@base-border-color: @darkest-base;
+
+@gutter-background-color: @dark-base;
+
+@pane-item-background-color: @base-background-color;
+@pane-item-border-color: @base-border-color;
+
+@input-background-color: @base;
+@input-border-color: @base-border-color;
+
+@tool-panel-background-color: darken(@panel-background-color, 1.5%);
+@tool-panel-border-color: @base-border-color;
+
+@inset-panel-background-color: @darker-base;
+@inset-panel-border-color: @base-border-color;
+
+@panel-background-color: @dark-base;
+@panel-heading-background-color: @lighter-base;
+@panel-heading-border-color: fadein(@base-border-color, 10%);
+
+@overlay-background-color: @dark-base;
+@overlay-border-color: @background-color-highlight;
+
+@button-background-color: @lighter-base;
+@button-border-color: @base-border-color;
+
+@tab-bar-background-color: @base;
+@tab-bar-border-color: darken(@tab-background-color-active, 10%);
+@tab-background-color: @brightest-base;
+@tab-background-color-hover: @light-base;
+@tab-background-color-active: @darker-base;
+@tab-background-color-active-hover: @bright-base;
+@tab-bar-after-background-color: @tab-background-color-active;
+@tab-border-color: @base-border-color;
+@tab-active-border-bottom-color: @primary-color;
+
+@tree-view-background-color: @darker-base;
+@tree-view-item-background-color-hover: @bright-base;
+@tree-view-item-background-color-selected: @brightest-base;
+@tree-view-item-background-color-selected-hover: @lighter-base;
+@tree-view-item-background-color-selected-active: @primary-color;
+@tree-view-item-background-color-selected-active-hover: @primary-color-hover;
+@tree-view-border-color: @tool-panel-border-color;
+@tree-view-resize-handle-background-color: @scrollbar-background-color;
+@tree-view-resize-handle-background-color-hover: lighten(@tree-view-resize-handle-background-color, 5%);
+@tree-view-resize-handle-background-color-active: darken(@tree-view-resize-handle-background-color, 5%);
+
+@scrollbar-background-color: @brighter-base; // Needs to be opaque -> atom/atom/issues/4578
+@scrollbar-background-color-hover: lighten(@scrollbar-background-color, 5%);
+@scrollbar-background-color-active: darken(@scrollbar-background-color, 5%);
+@scrollbar-color: @primary-color;
+@scrollbar-color-hover: @primary-color-hover;
+@scrollbar-color-active: @primary-color-active;
+
+// }
+
+// .variables() when (@theme-type = "light") {
+//
+// @text-color: #555;
+// @text-color-subtle: #aaa;
+// @text-color-highlight: #aaa;
+// @text-color-selected: @text-color-highlight;
+//
+// @app-background-color: #ccc;
+//
+// @base-background-color: darken(@tool-panel-background-color, 55%);
+// @base-border-color: darken(@app-background-color, 20%);
+//
+// @pane-item-background-color: @base-background-color;
+// @pane-item-border-color: @base-border-color;
+//
+// @input-background-color: #dedddb;
+// @input-border-color: @base-border-color;
+//
+// @tool-panel-background-color: @base-border-color;
+// @tool-panel-border-color: @base-border-color;
+//
+// @inset-panel-background-color: #ccc;
+// @inset-panel-border-color: @base-border-color;
+// @panel-background-color: #aaa;
+//
+// @panel-heading-background-color: #bcb7b2;
+// @panel-heading-border-color: fadein(@base-border-color, 10%);
+//
+// @overlay-background-color: #dfdedc;
+// @overlay-border-color: @background-color-highlight;
+//
+// @button-background-color: #bcb7b2;
+// @button-border-color: @base-border-color;
+//
+// @tab-bar-background-color: @app-background-color;
+// @tab-bar-border-color: darken(@tab-background-color-active, 10%);
+// @tab-background-color: darken(@app-background-color, 10%);
+// @tab-background-color-hover: #c4c4c4;
+// @tab-background-color-active: #e5e5e5;
+// @tab-background-color-active-hover: #dadada;
+// @tab-bar-after-background-color: @tab-background-color-active;
+// @tab-border-color: @base-border-color;
+// @tab-active-border-bottom-color: @primary-color;
+//
+// @tree-view-background-color: #aaa;
+// @tree-view-item-background-color-hover: #dbdbdb;
+// @tree-view-item-background-color-selected: darken(@app-background-color, 5%);
+// @tree-view-item-background-color-selected-hover: #bdbdbd;
+// @tree-view-item-background-color-selected-active: @primary-color;
+// @tree-view-item-background-color-selected-active-hover: @primary-color-hover;
+// @tree-view-border-color: @tool-panel-border-color;
+// @tree-view-resize-handle-background-color: @scrollbar-background-color;
+// @tree-view-resize-handle-background-color-hover: lighten(@tree-view-resize-handle-background-color, 5%);
+// @tree-view-resize-handle-background-color-active: darken(@tree-view-resize-handle-background-color, 5%);
+//
+// @gutter-background-color: #d5d5d5;
+//
+// @scrollbar-background-color: #d5d5d5; // Needs to be opaque -> atom/atom/issues/4578
+// @scrollbar-background-color-hover: lighten(@scrollbar-background-color, 5%);
+// @scrollbar-background-color-active: darken(@scrollbar-background-color, 5%);
+// @scrollbar-color: @primary-color;
+// @scrollbar-color-hover: @primary-color-hover;
+// @scrollbar-color-active: @primary-color-active;
+//
+// }
+//
+// .variables();
+
+@ui-site-color-1: @background-color-success; // green
+@ui-site-color-2: @background-color-info; // blue
+@ui-site-color-3: @background-color-warning; // orange
+@ui-site-color-4: #db2ff4; // purple
+@ui-site-color-5: #f5e11d; // yellow
+
+// Sizes
+
+@font-size: 11px;
+@input-font-size: 14px;
+
+@disclosure-arrow-size: 12px;
+
+@component-padding: 10px;
+@component-icon-padding: 5px;
+@component-icon-size: 16px;
+@component-line-height: 25px;
+@component-border-radius: 2px;
+
+@tree-view-item-height: 30px;
+
+@tab-height: 34px;
+
+// Other
+
+@font-family: 'Trebuchet MS', 'Segoe UI', Ubuntu, Cantarell, sans-serif;

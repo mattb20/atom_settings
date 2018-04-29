@@ -1,0 +1,151 @@
+/**
+ * text.less
+ * ----------------------------------------------------------------------------
+ * Base element styling to be used throughout the theme.
+ *
+ * Purplest, Inc. Dark Theme - UI [1.0.2]
+ * (https://github.com/PurplestInc/purplest-inc-dark-ui/styles/text.less)
+ *
+ * Maintained by: Purplest, Inc.
+ * (https://github.com/PurplestInc)
+ * (https://github.com/RobDukarski)
+ *
+ * @version 1.0.0 (06/02/16)
+ * @license MIT
+ * @copyright (c) 2016 Purplest, Inc.
+ * (https://purplest.com)
+ * ============================================================================
+ */
+
+@import "ui-mixins";
+@import "ui-variables";
+
+h1,
+h2,
+h3 {
+  line-height: 1em;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: normal;
+}
+
+pre {
+  background: @inset-panel-background-color;
+  border-radius: @component-border-radius;
+  border: none;
+  box-shadow: none;
+  color: @text-color;
+  margin: 0;
+}
+
+code {
+  .text(highlight);
+  background: @background-color-highlight;
+  border-radius: @component-border-radius;
+}
+
+.selected {
+  .text(highlight);
+}
+
+table tr {
+  background: transparent;
+  transition: background .1s linear;
+
+  &:hover {
+    background: rgba(255, 255, 255, .05);
+  }
+}
+
+.text-smaller {
+  font-size: .9em;
+}
+
+.text-subtle {
+  .text(subtle);
+}
+.text-highlight {
+  .text(highlight);
+}
+
+.text-error {
+  .text(error);
+}
+
+.text-info {
+  .text(info);
+
+  &:hover {
+    color: @text-color-info;
+  }
+}
+.text-warning {
+  .text(warning);
+
+  &:hover {
+    color: @text-color-warning;
+  }
+}
+.text-success {
+  .text(success);
+
+  &:hover {
+    color: @text-color-success;
+  }
+}
+
+.highlight {
+  background-color: @background-color-highlight;
+  border-radius: @component-border-radius;
+  color: @text-color-highlight;
+  font-weight: bold;
+  padding: 1px 3px;
+  text-shadow: none;
+}
+
+.highlight-color(@name, @color, @text-color) {
+  .highlight-@{name} {
+    background-color: fadeout(@color, 20%);
+    border-radius: @component-border-radius;
+    color: lighten(saturate(@text-color, 0%), 20%);
+    font-weight: bold;
+    padding: 1px 3px;
+    text-shadow: none;
+
+    &:hover {
+      background-color: fadeout(@color, 10%);
+      color: lighten(saturate(@text-color, 0%), 30%);
+    }
+  }
+}
+
+.highlight-color(info, @background-color-info, @text-color-info);
+
+.highlight-color(warning, @background-color-warning, @text-color-warning);
+
+.highlight-color(error, @background-color-error, @text-color-error);
+
+.highlight-color(success, @background-color-success, @text-color-success);
+
+.results-view .path-details.list-item {
+  color: darken(@text-color-highlight, 18%);
+}

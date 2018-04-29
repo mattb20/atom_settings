@@ -1,0 +1,84 @@
+/**
+ * panels.less
+ * ----------------------------------------------------------------------------
+ * Styling for the panels within the Atom text editor.
+ *
+ * Purplest, Inc. Dark Theme - UI [1.0.2]
+ * (https://github.com/PurplestInc/purplest-inc-dark-ui/styles/panels.less)
+ *
+ * Maintained by: Purplest, Inc.
+ * (https://github.com/PurplestInc)
+ * (https://github.com/RobDukarski)
+ *
+ * @version 1.0.0 (06/02/16)
+ * @license MIT
+ * @copyright (c) 2016 Purplest, Inc.
+ * (https://purplest.com)
+ * ============================================================================
+ */
+
+@import "ui-mixins";
+@import "ui-variables";
+@import "buttons";
+
+.panel {
+  &.bordered {
+    border: 1px solid @base-border-color;
+    border-radius: @component-border-radius;
+  }
+}
+
+atom-panel,
+.tool-panel {
+  .text(normal);
+  background-color: @tool-panel-background-color;
+  position: relative;
+
+  &.bottom,
+  &.panel-bottom {
+    border-top: 1px solid @tool-panel-border-color;
+    box-shadow: inset 0 1px 0 @background-color-highlight;
+  }
+
+  &.left,
+  &.panel-left {
+    border-right: 1px solid @tool-panel-border-color;
+  }
+
+  &.right,
+  &.panel-right {
+    border-left: 1px solid @tool-panel-border-color;
+  }
+}
+
+.inset-panel {
+  background-color: @inset-panel-background-color;
+  position: relative;
+}
+
+.is-blurred {
+  atom-panel,
+  .inset-panel {
+  }
+}
+
+.panel-heading {
+  .text(normal);
+  background-color: transparent;
+  background-image: -webkit-linear-gradient(@panel-heading-background-color, darken(@panel-heading-background-color, 10%));
+  border-bottom: 1px solid @panel-heading-border-color;
+  border-top: 1px solid fadein(@background-color-highlight, 10%);
+
+  .btn {
+    padding-left: 8px;
+    padding-right: 8px;
+
+    @active: darken(@button-background-color, 10%);
+    @bg: @button-background-color;
+    @hover: lighten(@button-background-color, 10%);
+    @selected: darken(@button-background-color, 10%);
+    @text: lighten(@text-color, 10%);
+
+    .btn-background(@text, @bg, @hover, @active, @selected);
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/d-118311-16099-1a7xe2i.0artchaor/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/d-118311-16099-1a7xe2i.0artchaor/package.tgz",
+        "spec": "/private/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/d-118311-16099-1a7xe2i.0artchaor/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/apm-install-dir-118311-16099-jsi0yc.oy9o83erk9"
+    ]
+  ],
+  "_from": "../d-118311-16099-1a7xe2i.0artchaor/package.tgz",
+  "_id": "purplest-inc-dark-ui@1.0.2",
+  "_inCache": true,
+  "_location": "/purplest-inc-dark-ui",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/d-118311-16099-1a7xe2i.0artchaor/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/d-118311-16099-1a7xe2i.0artchaor/package.tgz",
+    "spec": "/private/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/d-118311-16099-1a7xe2i.0artchaor/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-118311-16099-1a7xe2i.0artchaor/package.tgz",
+  "_shasum": "cc087bffba182b3340a8a836377c85a77030dcce",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/d-118311-16099-1a7xe2i.0artchaor/package.tgz",
+  "_where": "/private/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/apm-install-dir-118311-16099-jsi0yc.oy9o83erk9",
+  "bugs": {
+    "url": "https://github.com/PurplestInc/purplest-inc-dark-ui/issues"
+  },
+  "dependencies": {},
+  "description": "A dark UI theme for Atom by Purplest, Inc.",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/PurplestInc/purplest-inc-dark-ui#readme",
+  "keywords": [
+    "purplestinc",
+    "ui",
+    "theme",
+    "purple",
+    "dark"
+  ],
+  "license": "MIT",
+  "name": "purplest-inc-dark-ui",
+  "optionalDependencies": {},
+  "readme": "# Purplest, Inc. Dark Theme - UI [1.0.2]\n\nA dark UI theme for Atom by Purplest, Inc.\n\n[Atom Theme Page](https://atom.io/themes/purplest-inc-dark-ui)\n\n![preview](https://purplest.com/img/purplest-inc-dark-ui-theme-preview.png)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PurplestInc/purplest-inc-dark-ui.git"
+  },
+  "theme": "ui",
+  "version": "1.0.2"
+}

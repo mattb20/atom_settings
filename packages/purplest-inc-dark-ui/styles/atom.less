@@ -1,0 +1,120 @@
+/**
+ * atom.less
+ * ----------------------------------------------------------------------------
+ * Global styling for the Atom text editor.
+ *
+ * Purplest, Inc. Dark Theme - UI [1.0.2]
+ * (https://github.com/PurplestInc/purplest-inc-dark-ui/styles/atom.less)
+ *
+ * Maintained by: Purplest, Inc.
+ * (https://github.com/PurplestInc)
+ * (https://github.com/RobDukarski)
+ *
+ * @version 1.0.1 (05/25/17)
+ * @license MIT
+ * @copyright (c) 2017 Purplest, Inc.
+ * (https://purplest.com)
+ * ============================================================================
+ */
+
+@import "ui-variables";
+
+* {
+	box-sizing: border-box;
+}
+
+::selection {
+	background: @secondary-color;
+	color: @secondary-color-hover;
+}
+
+atom-workspace,
+body {
+  background-color: @app-background-color;
+}
+
+atom-workspace atom-workspace-axis {
+  box-shadow: 0 0 0 1px @base-border-color;
+  position: relative;
+  z-index: 1;
+}
+
+.horizontal-scrollbar,
+.vertical-scrollbar {
+	cursor: pointer;
+}
+
+.horizontal-scrollbar {
+  right: 9px;
+	width: 100%;
+}
+
+.vertical-scrollbar {
+	height: 100.3%;
+	top: -1px;
+}
+
+atom-text-editor,
+atom-text-editor::shadow {
+	background-color: @app-background-color;
+	box-shadow: inset 50px 0 0 0 @gutter-background-color;
+
+	.line-numbers {
+		background: none !important;
+	}
+
+	.lines .tile {
+		border-right: 1px solid @base-border-color;
+		box-sizing: border-box;
+		width: ~"calc(100% - 9px)" !important;
+	}
+
+	.scrollbar-corner {
+		border-right: 1px solid @base-border-color;
+	}
+}
+
+.scrollbars-visible-always {
+  /deep/ ::-webkit-scrollbar {
+		box-shadow: -1px  0   0 0 @base-border-color,
+		             0   -1px 0 0 @base-border-color;
+		height: 8px;
+		width: 8px;
+  }
+
+  /deep/ ::-webkit-scrollbar-track,
+  /deep/ ::-webkit-scrollbar-corner {
+    background: @scrollbar-background-color;
+		height: 8px;
+		width: 8px;
+  }
+
+  /deep/ ::-webkit-scrollbar-corner {
+    background: @scrollbar-background-color;
+		border-left: none;
+	}
+
+  /deep/ ::-webkit-scrollbar-track:hover,
+  /deep/ ::-webkit-scrollbar-corner:hover {
+    background: @scrollbar-background-color-hover;
+  }
+
+  /deep/ ::-webkit-scrollbar-track:active,
+  /deep/ ::-webkit-scrollbar-corner:active {
+    background: @scrollbar-background-color-active;
+  }
+
+  /deep/ ::-webkit-scrollbar-thumb {
+    background: @scrollbar-color;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px @base-border-color;
+  }
+
+	/deep/ ::-webkit-scrollbar-thumb:hover {
+		background: @scrollbar-color-hover;
+	}
+
+	/deep/ ::-webkit-scrollbar-thumb:active {
+		background: @scrollbar-color-active;
+	}
+}

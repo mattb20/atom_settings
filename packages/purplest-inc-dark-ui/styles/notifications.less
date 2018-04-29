@@ -1,0 +1,46 @@
+/**
+ * notifications.less
+ * ----------------------------------------------------------------------------
+ * Styles for the 'notifications' of the Atom text editor.
+ *
+ * Purplest, Inc. Dark Theme - UI [1.0.2]
+ * (https://github.com/PurplestInc/purplest-inc-dark-ui/styles/notifications.less)
+ *
+ * Maintained by: Purplest, Inc.
+ * (https://github.com/PurplestInc)
+ * (https://github.com/RobDukarski)
+ *
+ * @version 1.0.0 (05/25/17)
+ * @license MIT
+ * @copyright (c) 2017 Purplest, Inc.
+ * (https://purplest.com)
+ * ============================================================================
+ */
+
+atom-notification .close-all {
+  border: none;
+
+  .btn {
+    .btn-background(#aaa, @button-background-color, lighten(@button-background-color, 10%), darken(@button-background-color, 10%), darken(@button-background-color, 10%));
+  }
+
+  .btn.btn-primary {
+    .btn-variant(@secondary-color, @primary-color);
+  }
+
+  .btn.btn-info {
+    .btn-variant(@text-color-info-hover, @background-color-info);
+  }
+
+  .btn.btn-success {
+    .btn-variant(@text-color-success-hover, @background-color-success);
+  }
+
+  .btn.btn-warning {
+    .btn-variant(@text-color-warning-hover, @background-color-warning);
+  }
+
+  .btn.btn-error {
+    .btn-variant(@text-color-error-hover, @background-color-error);
+  }
+}

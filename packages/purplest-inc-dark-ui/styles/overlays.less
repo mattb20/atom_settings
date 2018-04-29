@@ -1,0 +1,61 @@
+/**
+ * overlays.less
+ * ----------------------------------------------------------------------------
+ * Styling for the overlays within the Atom text editor.
+ *
+ * Purplest, Inc. Dark Theme - UI [1.0.2]
+ * (https://github.com/PurplestInc/purplest-inc-dark-ui/styles/overlays.less)
+ *
+ * Maintained by: Purplest, Inc.
+ * (https://github.com/PurplestInc)
+ * (https://github.com/RobDukarski)
+ *
+ * @version 1.0.0 (06/02/16)
+ * @license MIT
+ * @copyright (c) 2016 Purplest, Inc.
+ * (https://purplest.com)
+ * ============================================================================
+ */
+
+@import "ui-variables";
+
+atom-panel.modal, .overlay {
+  background-color: @overlay-background-color;
+  border-radius: @component-border-radius;
+  border: 1px solid @overlay-border-color;
+  box-shadow: 0 0 10px @base-border-color;
+  color: @text-color;
+  padding: @component-padding;
+
+  atom-text-editor[mini] {
+    margin-bottom: @component-padding;
+  }
+
+  .select-list ol.list-group,
+  &.select-list ol.list-group {
+
+    background-color: lighten(@overlay-background-color, 3%);
+
+    li {
+      border-bottom: 1px solid @overlay-background-color;
+      padding: @component-padding;
+
+      &.two-lines { padding: @component-padding/2 @component-padding; }
+
+      .status.icon {
+        float: right;
+        margin-left: @component-icon-padding;
+
+        &:before {
+          margin-right: 0;
+        }
+      }
+
+      &.selected {
+        .status.icon {
+          color: @text-color-selected;
+        }
+      }
+    }
+  }
+}

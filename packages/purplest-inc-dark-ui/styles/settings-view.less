@@ -1,0 +1,263 @@
+/**
+ * settings-view.less
+ * ----------------------------------------------------------------------------
+ * Styles for the 'settings-view' package.
+ *
+ * Purplest, Inc. Dark Theme - UI [1.0.2]
+ * (https://github.com/PurplestInc/purplest-inc-dark-ui/styles/settings-view.less)
+ *
+ * Maintained by: Purplest, Inc.
+ * (https://github.com/PurplestInc)
+ * (https://github.com/RobDukarski)
+ *
+ * @version 1.0.0 (06/02/16)
+ * @license MIT
+ * @copyright (c) 2016 Purplest, Inc.
+ * (https://purplest.com)
+ * ============================================================================
+ */
+
+@import "octicon-mixins";
+@import "ui-variables";
+@import "ui-mixins";
+
+.theme-purplest-inc-dark-ui {
+
+  // Base
+
+  atom-pane-container {
+    font-family: @font-family;
+  }
+
+  .settings-view {
+    .text {
+      color: @text-color;
+    }
+
+    section .section-heading,
+    .section .section-heading {
+      -webkit-user-select: none;
+      color: @text-color-highlight;
+      cursor: default;
+      font-size: 1.75em;
+      font-weight: normal;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .sub-section-heading.icon::before,
+    .section-heading.icon::before {
+      position: relative;
+      top: -2px;
+    }
+
+    .package-update-view .package-status.icon-cloud-download {
+      color: @text-color-info;
+    }
+
+    // Buttons
+
+    .btn-default:active:focus,
+    .btn-default.active:focus,
+    .btn-default:active:hover,
+    .btn-default.active:hover,
+    .open > .dropdown-toggle.btn-default.focus,
+    .open > .dropdown-toggle.btn-default:hover {
+      background: @app-background-color;
+      color: @text-color;
+    }
+
+    .btn-default:active:focus,
+    .btn-default.active:focus,
+    .open > .dropdown-toggle.btn-default.focus {
+      background: #222;
+      color: #888;
+      outline: none;
+    }
+
+    // Links
+
+    .link,
+    .package-card .card-name a,
+    .package-card .meta-user .author {
+      color: @secondary-color;
+      transition: all .1s linear;
+    }
+
+    .package-card .card-name a {
+      color: @secondary-color-hover;
+    }
+
+    .link:focus,
+    .link:hover,
+    .package-card .meta-user .author:focus,
+    .package-card .meta-user .author:hover {
+      color: @secondary-color-hover;
+    }
+
+    .package-card .card-name a:focus,
+    .package-card .card-name a:hover {
+      color: lighten(@secondary-color-hover, 10%);
+    }
+
+    .link:active,
+    .package-card .meta-user .author:active {
+      color: @secondary-color-active;
+    }
+
+    .package-card .card-name a:active {
+      color: @secondary-color;
+    }
+
+    // Navigation
+
+    .config-menu .nav > li > a,
+    .nav.nav-pills > li > a,
+    .nav-pills > li > a {
+      background-color: transparent;
+      box-shadow: inset 0 1px 0 0 @base-border-color,
+                        0 1px 0 0 @base-border-color;
+      transition: all .1s linear;
+    }
+
+    .config-menu .nav > li > a:focus,
+    .config-menu .nav > li > a:hover,
+    .nav-pills > li > a:focus,
+    .nav-pills > li > a:hover {
+      background-color: #424242;
+    }
+
+    .config-menu .nav > li > a:active,
+    .nav-pills > li > a:active {
+      background-color: #333;
+    }
+
+    .config-menu .nav > li.active > a,
+    .nav.nav-pills > li.active > a,
+    .nav-pills > li.active > a {
+      background-color: @primary-color;
+      box-shadow: 0  1px 0 0 @base-border-color,
+                  0 -1px 0 0 @base-border-color;
+      transition: all .1s linear;
+    }
+
+    .config-menu .nav > li.active > a:focus,
+    .config-menu .nav > li.active > a:hover,
+    .nav-pills > li.active > a:focus,
+    .nav-pills > li.active > a:hover {
+      background-color: @primary-color-hover;
+    }
+
+    .config-menu .nav > li.active > a:active,
+    .nav-pills > li.active > a:active {
+      background-color: @primary-color-active;
+    }
+
+    // Form Controls
+
+    input,
+    input:focus,
+    input:hover,
+    select.form-control,
+    select.form-control:focus,
+    select.form-control:hover,
+    input[type="checkbox"],
+    input[type="checkbox"]:focus,
+    input[type="checkbox"]:hover,
+    input[type="checkbox"]:checked,
+    input[type="checkbox"]:checked:focus,
+    input[type="checkbox"]:checked:hover {
+      background-color: #4c4c4c;
+      border: none;
+      box-shadow: 0 0 0 1px @base-border-color;
+    }
+
+    input,
+    select.form-control,
+    input[type="checkbox"],
+    input[type="checkbox"]:focus,
+    input[type="checkbox"]:checked {
+      background-color: #444;
+    }
+
+    input[type="checkbox"]::before,
+    input[type="checkbox"]::after {
+      background-color: @text-color-highlight;
+    }
+
+    .config-menu .nav > li.active > a,
+    .nav.nav-pills > li.active > a,
+    input[type="checkbox"]:checked,
+    input[type="checkbox"]:checked:focus,
+    .nav-pills > li.active > a {
+      background-color: @primary-color;
+      box-shadow: 0  1px 0 0 @base-border-color,
+                  0 -1px 0 0 @base-border-color;
+    }
+
+    .config-menu .nav > li.active > a:focus,
+    .config-menu .nav > li.active > a:hover,
+    .nav-pills > li.active > a:focus,
+    .nav-pills > li.active > a:hover,
+    input[type="checkbox"]:active,
+    input[type="checkbox"]:checked:hover {
+      background-color: @primary-color-hover;
+    }
+
+    .config-menu .nav > li.active > a:active,
+    .nav-pills > li.active > a:active {
+      background-color: @primary-color-active;
+    }
+
+    input[type="checkbox"]:checked,
+    input[type="checkbox"]:checked:focus {
+      box-shadow: 0 0 0 1px @base-border-color;
+    }
+
+    // -------------------------
+    // Widgets
+    // -------------------------
+
+    // Alert
+
+    .alert-info {
+      .alert-type(@text-color-info; @background-color-info);
+    }
+
+    .alert-success {
+      .alert-type(@text-color-success; @background-color-success);
+    }
+
+    .alert-warning {
+      .alert-type(@text-color-warning; @background-color-warning);
+    }
+
+    .alert-error,
+    .alert-danger {
+      .alert-type(@text-color-error;   @background-color-error);
+    }
+
+    // Package Card
+
+    .package-card {
+      transition: all .1s linear;
+    }
+  }
+}
+
+.alert-type(@tx; @bg) {
+  background-color: @bg;
+  border-color: lighten(@tx, 10%);
+  color: lighten(@tx, 10%);
+
+  &:hover {
+    background-color: lighten(@bg, 10%);
+    border-color: lighten(@tx, 20%);
+    color: lighten(@tx, 20%);
+  }
+
+  .alert-link {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
